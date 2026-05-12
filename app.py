@@ -27,27 +27,23 @@ try:
     GRADCAM_AVAILABLE = True
 except ImportError:
     GRADCAM_AVAILABLE = False
-import torch
-from huggingface_hub import hf_hub_download
-from torchvision import models
 
 # =====================================
-# Download Classifier Model
+# Load Severity Model
 # =====================================
 
-classifier_path = hf_hub_download(
-    repo_id="amal123/greenvision-models",
-    filename="classifier_model.pth"
+severity_model = models.resnet34(weights=None)
+
+severity_model.fc = torch.nn.Linear(
+    severity_model.fc.in_features,
+    1  # غالباً severity تكون قيمة رقمية واحدة
 )
 
-# =====================================
-# Download Severity Model
-# =====================================
-
-severity_path = hf_hub_download(
-    repo_id="amal123/greenvision-models",
-    filename="severity_model.pth"
+severity_model.load_state_dict(
+    torch.load(severity_path, map_location="cpu")
 )
+
+severity_model.eval()
 
 # =====================================
 # Load Classification Model
