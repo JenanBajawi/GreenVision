@@ -30,8 +30,8 @@ except ImportError:
 import urllib.request
 
 MODEL_URLS = {
-    "plant_model.pth": "https://huggingface.co/USERNAME/greenvision-models/resolve/main/plant_model.pth",
-    "severity_model.pth": "https://huggingface.co/USERNAME/greenvision-models/resolve/main/severity_model.pth"
+    "plant_model.pth": "https://huggingface.co/JenanB/greenvision-models/resolve/main/plant_model.pth",
+    "severity_model.pth": "https://huggingface.co/JenanB/greenvision-models/resolve/main/severity_model.pth"
 }
 
 for filename, url in MODEL_URLS.items():
