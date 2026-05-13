@@ -34,9 +34,15 @@ MODEL_URLS = {
     "severity_model.pth": "https://huggingface.co/JenanB/greenvision-models/resolve/main/severity_model.pth"
 }
 
-for filename, url in MODEL_URLS.items():
-    if not os.path.exists(filename):
-        urllib.request.urlretrieve(url, filename)
+@st.cache_resource(show_spinner=False)
+def download_models():
+    for filename, url in MODEL_URLS.items():
+        if not os.path.exists(filename):
+            with st.spinner(f"Downloading {filename} (one-time setup)…"):
+                urllib.request.urlretrieve(url, filename)
+    return True
+
+download_models()
 # ============================================================
 # PAGE CONFIG
 # ============================================================
