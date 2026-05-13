@@ -31,40 +31,34 @@ Built with PyTorch and Streamlit using a scientific botanical interface design.
 
 ## 🖥 Main Interface
 
-> ضع هنا صورة الصفحة الرئيسية للتطبيق
 
 <p align="center">
-  <img src="images/home.png" width="90%">
+  <img src="images/Main%20Interface.png" width="90%">
 </p>
 
 ---
 
 ## 🔍 Disease Prediction Result
 
-> ضع هنا صورة النتيجة بعد رفع الصورة
-
 <p align="center">
-  <img src="images/result.png" width="90%">
+  <img src="images/Disease%20Prediction%20Result1.png" width="90%">
 </p>
-
 ---
 
 ## 🧠 Grad-CAM Visualization
 
-> ضع هنا صورة الـ Heatmap
 
 <p align="center">
-  <img src="images/gradcam.png" width="90%">
+  <img src="images/Grad-CAM%20Visualization.png" width="90%">
 </p>
 
 ---
 
 ## 📊 Probability Distribution & Severity Estimation
 
-> ضع هنا صورة الاحتمالات ونسبة الإصابة
 
 <p align="center">
-  <img src="images/probabilities.png" width="90%">
+  <img src="images/Probability%20Distribution%20%26%20Severity%20Estimation.png" width="90%">
 </p>
 
 ---
