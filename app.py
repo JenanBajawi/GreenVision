@@ -17,7 +17,6 @@ import os
 import io
 import urllib.request
 import time
-from huggingface_hub import hf_hub_download
 
 # Grad-CAM
 try:
