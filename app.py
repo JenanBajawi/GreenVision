@@ -1033,6 +1033,24 @@ if uploaded_file is not None:
         info = DISEASE_INFO[cls_name]
         is_top = (i == 0)
         prob_html += render_probability_bar(info['common_name'], prob, is_top)
+        # === Probability distribution ===
+st.markdown('<div class="ornamental-divider"><span>✦</span></div>', unsafe_allow_html=True)
+
+st.markdown("""
+<div class="fade-up delay-3">
+    <div class="section-label">Probability Distribution</div>
+    <div class="section-title">Differential <em>diagnosis</em></div>
+</div>
+""", unsafe_allow_html=True)
+
+# ترتيب من الأعلى للأقل
+sorted_probs = sorted(all_probs.items(), key=lambda x: x[1], reverse=True)
+
+prob_html = ""
+for i, (cls_name, prob) in enumerate(sorted_probs):
+    info = DISEASE_INFO[cls_name]
+    is_top = (i == 0)
+    prob_html += render_probability_bar(info['common_name'], prob, is_top)
 
 components.html(
     f'''
@@ -1043,6 +1061,11 @@ components.html(
     height=300,
     scrolling=False
 )
+
+# === Treatment recommendations ===
+st.markdown('<div class="ornamental-divider"><span>✶</span></div>', unsafe_allow_html=True)
+
+ 
 
 # === Treatment recommendations ===
     st.markdown('<div class="ornamental-divider"><span>✶</span></div>', unsafe_allow_html=True)
