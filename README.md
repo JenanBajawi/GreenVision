@@ -33,32 +33,36 @@ Built with PyTorch and Streamlit using a scientific botanical interface design.
 
 
 <p align="center">
-  <img src="images/Main%20Interface.png" width="90%">
+  <img src="Image%20GreenVision/Main%20Interface.png" width="90%">
 </p>
+
 
 ---
 
 ## 🔍 Disease Prediction Result
 
 <p align="center">
-  <img src="images/Disease%20Prediction%20Result1.png" width="90%">
+  <img src="Image%20GreenVision/Disease%20Prediction%20Result1.png" width="90%">
 </p>
 ---
 
 ## 🧠 Grad-CAM Visualization
 
 
+
 <p align="center">
-  <img src="images/Grad-CAM%20Visualization.png" width="90%">
+  <img src="Image%20GreenVision/Grad-CAM%20Visualization.png" width="90%">
 </p>
+
 
 ---
 
 ## 📊 Probability Distribution & Severity Estimation
 
 
+
 <p align="center">
-  <img src="images/Probability%20Distribution%20%26%20Severity%20Estimation.png" width="90%">
+  <img src="Image%20GreenVision/Probability%20Distribution%20%26%20Severity%20Estimation.png" width="90%">
 </p>
 
 ---
