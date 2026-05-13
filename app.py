@@ -27,7 +27,17 @@ try:
 except ImportError:
     GRADCAM_AVAILABLE = False
 
+import urllib.request
+import os
 
+MODEL_URLS = {
+    "plant_model.pth": "https://huggingface.co/JenanB/greenvision-model/resolve/main/plant_model.pth",
+    "severity_model.pth": "https://huggingface.co/JenanB/greenvision-model/resolve/main/severity_model.pth"
+}
+
+for filename, url in MODEL_URLS.items():
+    if not os.path.exists(filename):
+        urllib.request.urlretrieve(url, filename)
 # ============================================================
 # PAGE CONFIG
 # ============================================================
