@@ -27,8 +27,6 @@ try:
 except ImportError:
     GRADCAM_AVAILABLE = False
 
-import urllib.request
-import os
 
 MODEL_URLS = {
     "plant_model.pth": "https://huggingface.co/JenanB/greenvision-model/resolve/main/plant_model.pth",
@@ -37,7 +35,14 @@ MODEL_URLS = {
 
 for filename, url in MODEL_URLS.items():
     if not os.path.exists(filename):
-        urllib.request.urlretrieve(url, filename)
+        with st.spinner(f"Downloading {filename}..."):
+            try:
+                urllib.request.urlretrieve(url, filename)
+                st.success(f"{filename} downloaded successfully!")
+            except Exception as e:
+                st.error(f"Error downloading {filename}")
+                st.error(e)
+                st.stop()
 # ============================================================
 # PAGE CONFIG
 # ============================================================
