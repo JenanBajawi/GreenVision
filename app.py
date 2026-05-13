@@ -15,7 +15,6 @@ from PIL import Image
 import numpy as np
 import os
 import io
-import urllib.request
 import time
 
 # Grad-CAM
@@ -27,22 +26,19 @@ try:
 except ImportError:
     GRADCAM_AVAILABLE = False
 
+from huggingface_hub import hf_hub_download
 
-MODEL_URLS = {
-    "plant_model.pth": "https://huggingface.co/JenanB/greenvision-model/resolve/main/plant_model.pth",
-    "severity_model.pth": "https://huggingface.co/JenanB/greenvision-model/resolve/main/severity_model.pth"
-}
+hf_hub_download(
+    repo_id="JenanB/greenvision-model",
+    filename="plant_model.pth",
+    local_dir="."
+)
 
-for filename, url in MODEL_URLS.items():
-    if not os.path.exists(filename):
-        with st.spinner(f"Downloading {filename}..."):
-            try:
-                urllib.request.urlretrieve(url, filename)
-                st.success(f"{filename} downloaded successfully!")
-            except Exception as e:
-                st.error(f"Error downloading {filename}")
-                st.error(e)
-                st.stop()
+hf_hub_download(
+    repo_id="JenanB/greenvision-model",
+    filename="severity_model.pth",
+    local_dir="."
+)
 # ============================================================
 # PAGE CONFIG
 # ============================================================
