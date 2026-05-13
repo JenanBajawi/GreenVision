@@ -6,7 +6,7 @@
   Team Group 19 | Supervisor: Dr. Serene Noor Wali
 ============================================================
 """
-
+import streamlit.components.v1 as components
 import streamlit as st
 import torch
 import torch.nn as nn
@@ -1034,9 +1034,18 @@ if uploaded_file is not None:
         is_top = (i == 0)
         prob_html += render_probability_bar(info['common_name'], prob, is_top)
 
-    st.markdown(f'<div class="specimen-card">{prob_html}</div>', unsafe_allow_html=True)
+import streamlit.components.v1 as components
 
-    # === Treatment recommendations ===
+components.html(
+    f'''
+    <div class="specimen-card">
+        {prob_html}
+    </div>
+    ''',
+    height=300,
+    scrolling=False
+)
+# === Treatment recommendations ===
     st.markdown('<div class="ornamental-divider"><span>✶</span></div>', unsafe_allow_html=True)
 
     st.markdown(f"""
