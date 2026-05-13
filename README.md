@@ -1,8 +1,9 @@
 # 🍇 GreenVision – Grape Leaf Disease Detection & Severity Estimation
 
 <p align="center">
-  <img src="images/banner.png" width="100%" alt="GreenVision Banner">
+  <img src="Image%20GreenVision/Main%20Interface.png" width="90%">
 </p>
+
 
 <p align="center">
 An end-to-end deep learning application that detects grape leaf diseases, estimates infection severity, and visually explains predictions using Grad-CAM.
