@@ -31,7 +31,16 @@ except ImportError:
 # =====================================
 # Load Severity Model
 # =====================================
+import urllib.request
 
+MODEL_URLS = {
+    "plant_model.pth": "https://huggingface.co/JenanB/greenvision-models/resolve/main/plant_model.pth",
+    "severity_model.pth": "https://huggingface.co/JeananB/greenvision-models/resolve/main/severity_model.pth"
+}
+
+for filename, url in MODEL_URLS.items():
+    if not os.path.exists(filename):
+        urllib.request.urlretrieve(url, filename)
 severity_model = models.resnet34(weights=None)
 
 severity_model.fc = torch.nn.Linear(
