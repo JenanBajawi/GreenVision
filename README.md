@@ -23,8 +23,6 @@ The application can:
 
 Built with PyTorch and Streamlit using a scientific botanical interface design.
 
-> Developed as a Computer Vision course project at Umm Al-Qura University under the supervision of Dr. Serene Noor Wali.
-
 ---
 
 # ✨ Application Screenshots
