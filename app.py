@@ -27,7 +27,19 @@ try:
 except ImportError:
     GRADCAM_AVAILABLE = False
 
+from huggingface_hub import hf_hub_download
 
+hf_hub_download(
+    repo_id="JenanB/greenvision-model",
+    filename="plant_model.pth",
+    local_dir="."
+)
+
+hf_hub_download(
+    repo_id="JenanB/greenvision-model",
+    filename="severity_model.pth",
+    local_dir="."
+)
 # ============================================================
 # PAGE CONFIG
 # ============================================================
