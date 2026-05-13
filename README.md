@@ -2,7 +2,7 @@
 
 An end-to-end deep learning application that detects diseases on grape leaves, estimates infection severity, and visually explains its predictions using Grad-CAM. Built as a scientific diagnostic instrument with an editorial-botanical interface using **Streamlit**.
 
-This project was developed as a Computer Vision course project at **Umm Al-Qura University · Group 19**, supervised by **Dr. Serene Noor Wali**.
+This project was developed as a Computer Vision course project at **Umm Al-Qura University supervised by **Dr. Serene Noor Wali**.
 
 ---
 
