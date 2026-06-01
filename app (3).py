@@ -838,7 +838,7 @@ def generate_gradcam(model, input_tensor, rgb_img, target_class):
         )
         return visualization
     except Exception as e:
-        st.warning(f"Grad-CAM error: {e}")
+        st.error(f"Grad-CAM REAL ERROR: {repr(e)}")
         return None
 
 
