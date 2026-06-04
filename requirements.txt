@@ -4,6 +4,6 @@ torchvision
 Pillow
 numpy
 huggingface_hub
-grad-cam
+grad-cam==1.5.4
 opencv-python-headless
 matplotlib
